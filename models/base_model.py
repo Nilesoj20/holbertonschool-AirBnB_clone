@@ -24,12 +24,10 @@ class BaseModel:
     def to_dict(self):
         """ dictionary representation with “simple object type” """
         value_class = self.__class__.__name__
-        value_update = self.updated_at.isoformat()
-        value_created = self.created_at.isoformat()
-        dic = dict()
-        for clave, value in self.__dict__.items():
-            dic[clave] = value
-            dic['update_at'] = value_update
-            dic['created_at'] = value_created
-            dic['__class__'] = value_class
+        value_update = self.updated_at.strftime('%Y-%m-%d %H:%M:%S.%f')
+        value_created = self.created_at.strftime('%Y-%m-%d %H:%M:%S.%f')
+        dic = self.__dict__.copy()
+        dic["updated_at"] = value_update
+        dic["created_at"] = value_created
+        dic["__class__"] = value_class
         return dic
