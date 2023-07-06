@@ -9,13 +9,18 @@ class BaseModel:
     """class Base"""
     def __init__(self, *args, **kwargs):
         """ Constructor """
-        joselin = '%Y-%m-%dT%H:%M:%S.%f'
         if kwargs:
+            # self.__dict__ = kwargs
+            # self.created_at = datetime.strptime(self.created_at,
+            #                                     "%Y-%m-%dT%H:%M:%S.%f")
+
+            # self.updated_at = datetime.strptime(self.updated_at,
+            #                                     "%Y-%m-%dT%H:%M:%S.%f")
             for key, value in kwargs.items():
                 if key == "created_at":
-                    value = datetime.strptime(value, joselin)
+                    value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
                 if key == "updated_at":
-                    value = datetime.strptime(value, joselin)
+                    value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
                 if key != "__class__":
                     setattr(self, key, value)
         else:
