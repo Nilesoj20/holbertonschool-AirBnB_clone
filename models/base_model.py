@@ -1,16 +1,29 @@
 #!/usr/bin/python3
 import uuid
-import datetime
+from datetime import datetime
 
 
 class BaseModel:
     """defines all common attributes/methods for other classes """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """ init constructor method """
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+        f = "%Y-%m-%d %H:%M:%S.%f"
+        if len(kwargs) != 0:
+            for clave, valor in kwargs.items():
+                if clave == "updated_at":
+                    self.__dict__[clave] = datetime.strptime(valor, f)
+                    continue
+                elif clave == "created_at":
+                    self.__dict__[clave] = datetime.strptime(valor, f)
+                    continue
+                else:
+                    self.__dict__[clave] = valor
+        else:
+            models.storage.new(self)
 
     def __str__(self):
         """ Method __str__ string representation of an object"""
@@ -19,7 +32,8 @@ class BaseModel:
 
     def save(self):
         """ Public instance methods save updates updated_at """
-        self.updated_at = datetime.datetime.now()
+        self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ dictionary representation with “simple object type” """
