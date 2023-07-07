@@ -1,11 +1,11 @@
 #!/bin/bash/python3
+
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """ command of my interactive shell
-    args:
-        promt(str): started prompt request"""
+    """Command interpreter class for HBNB"""
+
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
