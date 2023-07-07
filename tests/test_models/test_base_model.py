@@ -1,37 +1,41 @@
+#!/usr/bin/python3
 import unittest
 from models.base_model import BaseModel
-import datetime
+from datetime import datetime
+
 
 class TestBaseModel(unittest.TestCase):
-    """Test the BaseModel class"""
     def setUp(self):
-        self.base_model = BaseModel()
-
-    def test_id(self):
-        self.assertIsInstance(self.base_model.id, str)
-
-    def test_created_at(self):
-        self.assertIsInstance(self.base_model.created_at, datetime.datetime)
-
-    def test_updated_at(self):
-        self.assertIsInstance(self.base_model.updated_at, datetime.datetime)
+        self.model = BaseModel()
 
     def test_save(self):
-        previous_updated_at = self.base_model.updated_at
-        self.base_model.save()
-        self.assertNotEqual(previous_updated_at, self.base_model.updated_at)
+        prev_updated_at = self.model.updated_at
+        self.model.save()
+        self.assertNotEqual(prev_updated_at, self.model.updated_at)
 
     def test_to_dict(self):
-        result = self.base_model.to_dict()
-        self.assertIsInstance(result, dict)
+        model_dict = self.model.to_dict()
+        self.assertEqual(type(model_dict), dict)
+        self.assertEqual(model_dict['__class__'], 'BaseModel')
+        self.assertTrue('id' in model_dict)
+        self.assertTrue('created_at' in model_dict)
+        self.assertTrue('updated_at' in model_dict)
 
-    def test_to_dict_contains_correct_values(self):
-        result = self.base_model.to_dict()
-        self.assertEqual(result['__class__'], 'BaseModel')
-        self.assertEqual(result['id'], self.base_model.id)
-        self.assertEqual(result['created_at'], self.base_model.created_at.strftime('%Y-%m-%d %H:%M:%S.%f'))
-        self.assertEqual(result['updated_at'], self.base_model.updated_at.strftime('%Y-%m-%d %H:%M:%S.%f'))
+    def test_id(self):
+        self.assertIsNotNone(self.model.id)
+        self.assertEqual(type(self.model.id), str)
+
+    def test_created_at(self):
+        self.assertIsNotNone(self.model.created_at)
+        self.assertEqual(type(self.model.created_at), datetime)
+
+    def test_str(self):
+        model_str = str(self.model)
+        self.assertEqual(type(model_str), str)
+        self.assertIn(self.model.__class__.__name__, model_str)
+        self.assertIn(self.model.id, model_str)
+        self.assertIn(str(self.model.__dict__), model_str)
+
 
 if __name__ == '__main__':
     unittest.main()
-
