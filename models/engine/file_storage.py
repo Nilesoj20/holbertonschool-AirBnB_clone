@@ -3,34 +3,36 @@ import json
 from models.base_model import BaseModel
 
 class FileStorage:
-    """Comentario """
+    """Class that serializes and deserializes 
+    instances to a JSON file
+    """
     __file_path = "file.json"
-    __objects = {}
+    __objects = dic()
 
     def all(self):
-        """Comentario """
+        """Returns all objects stored in the attribute """
         return FileStorage.__objects
 
     def new(self, obj):
-        """Comentario """
-        ocname = obj.__class__.__name__
-        FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
+        """Add a new object to the dictionary"""
+        name_obj = obj.__class__.__name__
+        FileStorage.__objects["{}.{}".format(name_obj, obj.id)] = obj
 
     def save(self):
-        """Comentario """
-        odict = FileStorage.__objects
-        objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
-        with open(FileStorage.__file_path, "w") as f:
-            json.dump(objdict, f)
+        """Saves the objects stored in the dictionary to the JSON file"""
+        dict_ = FileStorage.__objects
+        obj_dict = {obj: dict_[obj].to_dict() for obj in dict_.keys()}
+        with open(FileStorage.__file_path, "w") as file:
+            json.dump(obj_dict, file)
 
     def reload(self):
-        """Comentario """
+        """Loads the data from the JSON file and converts it back to objects. """
         try:
-            with open(FileStorage.__file_path) as f:
-                objdict = json.load(f)
-                for o in objdict.values():
-                    cls_name = o["__class__"]
-                    del o["__class__"]
-                    self.new(eval(cls_name)(**o))
+            with open(FileStorage.__file_path) as file:
+                obj_dict = json.load(f)
+                for val in objdict.values():
+                    name = val["__class__"]
+                    del val["__class__"]
+                    self.new(eval(name)(**val))
         except FileNotFoundError:
             return
