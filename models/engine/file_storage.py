@@ -1,36 +1,43 @@
 #!/usr/bin/python3
+""" the json file store """
+
 import json
 from models.base_model import BaseModel
 
+
 class FileStorage:
-    """Comentario """
+    """Filestore class """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """Comentario """
+        """return the dictionary of all objects. """
         return FileStorage.__objects
 
     def new(self, obj):
-        """Comentario """
-        ocname = obj.__class__.__name__
-        FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
+        """set a new object in the __objects dictionaty."""
+        if obj:
+            key = "{}.{}".format(obj.__class__.__name__, obj.id)
+            self.__objects[key] = obj
 
     def save(self):
-        """Comentario """
-        odict = FileStorage.__objects
-        objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
-        with open(FileStorage.__file_path, "w") as f:
-            json.dump(objdict, f)
+        """Serialize __objects to the JSON file """
+        
+        obj_dict = {}
+
+        for key, obj in self.__objects.items():
+            obj_dict[key] = obj.to_dict()
+        with open(self.__file_path, 'w', encoding='utf-8') as f:
+            json.dump(obj_dict, f)
 
     def reload(self):
-        """Comentario """
+        """Deserialize the JSON file to __objects. """
+
         try:
-            with open(FileStorage.__file_path) as f:
-                objdict = json.load(f)
-                for o in objdict.values():
-                    cls_name = o["__class__"]
-                    del o["__class__"]
-                    self.new(eval(cls_name)(**o))
+            with open(self.__file_path, 'r', encoding='utf-8') as f:
+                new_obj_dict = json.load(f)
+            for key, value in new_obj_dict.items():
+                obj = self.class_dict[value['__class__']](**value)
+                self.__objects[key] = obj
         except FileNotFoundError:
-            return
+            pass
