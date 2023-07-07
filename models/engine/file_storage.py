@@ -2,11 +2,6 @@
 import json
 from models.base_model import BaseModel
 
-
-#!/usr/bin/python3
-import json
-from models.base_model import BaseModel
-
 class FileStorage:
     """Comentario """
     __file_path = "file.json"
