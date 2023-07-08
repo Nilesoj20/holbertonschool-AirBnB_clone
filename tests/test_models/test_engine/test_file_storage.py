@@ -36,6 +36,10 @@ class FileStorageTestCase(unittest.TestCase):
         self.storage.save()
         self.assertTrue(os.path.exists("file.json"))
 
+    def test_save_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.save(None)
+
     def test_reload(self):
         obj = User()
         self.storage.new(obj)
@@ -46,12 +50,6 @@ class FileStorageTestCase(unittest.TestCase):
         all_objects = new_storage.all()
         self.assertEqual(all_objects, {"User.{}".format(obj.id): obj})
 
-class TestBaseModel(unittest.TestCase):
-    
-    def test_save(self):
-        obj = BaseModel()
-        obj.save()
-        self.assertTrue(os.path.exists("file.json"))
 
 if __name__ == '__main__':
     unittest.main()
