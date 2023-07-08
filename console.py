@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
         """create a new instance"""
         args = arg.split()
         if not args:
-            print("** class name missiong **")
+            print("** class name missing **")
             return
         class_name = args[0]
         if class_name not in self.valid_classes:
@@ -49,11 +49,11 @@ class HBNBCommand(cmd.Cmd):
         if len(args) < 2:
             print("** instance id missing **")
             return
-        instance = storage.all()
+        instances = storage.all()
         instance_id = args[1]
         key = "{}.{}".format(class_name, instance_id)
         if key not in instances:
-            print("** no instance found**")
+            print("** no instance found **")
             return
         print(instances[key])
 
@@ -74,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
         instance_id = args[1]
         key = "{}.{}".format(class_name, instance_id)
         if key not in instances:
-            print("** no instances found **")
+            print("** no instance found **")
             return
         del instances[key]
         storage.save()
