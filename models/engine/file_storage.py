@@ -5,7 +5,7 @@ from models.user import User
 
 
 class FileStorage:
-    """Class that serializes and deserializes 
+    """Class that serializes and deserializes
     instances to a JSON file
     """
     __file_path = "file.json"
@@ -28,7 +28,9 @@ class FileStorage:
             json.dump(obj_dict, file)
 
     def reload(self):
-        """Loads the data from the JSON file and converts it back to objects. """
+        """Loads the data from the JSON file and
+        converts it back to objects
+        """
         try:
             with open(FileStorage.__file_path) as file:
                 obj_dict = json.load(file)

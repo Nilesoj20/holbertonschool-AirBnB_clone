@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
     def show_user(self, arg):
         """Displays the information of a specific user """
         div_arg = parse(arg)
-        obj_dict =  storage.all()
+        obj_dict = storage.all()
         print(obj_dict["{}.{}".format(div_arg[0], div_arg[1])])
 
     def create_user(self, arg):
@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
 
     def destroy_user(self, arg):
-        """ Deletes a specific user based on his 
+        """ Deletes a specific user based on his
         or her ID or identification
         """
         div_arg = parse(arg)
@@ -44,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
         del obj_dict["{}.{}".format(div_arg[0], div_arg[1])]
         storage.save()
 
-    def update_user(self,arg):
+    def update_user(self, arg):
         """ Updates the attributes of an existing user based
         on their ID or identification
         """
@@ -60,16 +60,17 @@ class HBNBCommand(cmd.Cmd):
         elif type(eval(div_arg[2])) == dict:
             obj = obj_dict["{}.{}".format(div_arg[0], div_arg[1])]
             for key, value in eval(div_arg[2]).items():
+                obj = obj.__class__.__dict__[key]
                 if (key in obj.__class__.__dict__.keys() and
-                        type(obj.__class__.__dict__[key]) in {str, int, float}):
-                    valtype = type(obj.__class__.__dict__[key])
+                        type(obj) in {str, int, float}):
+                    valtype = type(obj)
                     obj.__dict__[key] = valtype(value)
                 else:
                     obj.__dict__[key] = value
         storage.save()
 
     def all_User(self, arg):
-        """ Display string representations of 
+        """ Display string representations of
         all instances of a given class"""
         if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")

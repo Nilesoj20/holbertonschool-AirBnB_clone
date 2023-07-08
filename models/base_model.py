@@ -17,7 +17,8 @@ class BaseModel:
             # Restore attributes from dictionary representation
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
-                    setattr(self, key, datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
+                    iso_ = "%Y-%m-%dT%H:%M:%S.%f"
+                    setattr(self, key, datetime.strptime(value, iso_))
                 elif key != '__class__':
                     setattr(self, key, value)
         else:
@@ -35,7 +36,7 @@ class BaseModel:
         """Update the updated_at attribute with the current datetime."""
         self.updated_at = datetime.now()
         models.storage.save()
-        
+
     def to_dict(self):
         """Return a dictionary representation of the BaseModel instance."""
         dict_copy = self.__dict__.copy()
