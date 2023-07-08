@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import uuid
+from uuid import uuid4
 from datetime import datetime
 import models
 
@@ -21,9 +21,10 @@ class BaseModel:
                 elif key != '__class__':
                     setattr(self, key, value)
         else:
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """Return a string representation of the BaseModel instance."""
@@ -42,4 +43,3 @@ class BaseModel:
         dict_copy["updated_at"] = self.updated_at.isoformat()
         dict_copy["__class__"] = self.__class__.__name__
         return dict_copy
-

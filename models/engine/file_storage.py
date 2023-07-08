@@ -2,12 +2,13 @@
 import json
 from models.base_model import BaseModel
 
+
 class FileStorage:
     """Class that serializes and deserializes 
     instances to a JSON file
     """
     __file_path = "file.json"
-    __objects = dic()
+    __objects = {}
 
     def all(self):
         """Returns all objects stored in the attribute """
@@ -29,8 +30,8 @@ class FileStorage:
         """Loads the data from the JSON file and converts it back to objects. """
         try:
             with open(FileStorage.__file_path) as file:
-                obj_dict = json.load(f)
-                for val in objdict.values():
+                obj_dict = json.load(file)
+                for val in obj_dict.values():
                     name = val["__class__"]
                     del val["__class__"]
                     self.new(eval(name)(**val))
