@@ -36,6 +36,11 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(self.model.id, model_str)
         self.assertIn(str(self.model.__dict__), model_str)
 
+    def test_custom_attribute(self):
+        self.model.custom_attribute = "test value"
+        self.model.save()
+        self.assertEqual(self.model.custom_attribute, "test value")
+
 
 if __name__ == '__main__':
     unittest.main()
