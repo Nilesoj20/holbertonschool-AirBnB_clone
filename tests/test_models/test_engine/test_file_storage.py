@@ -46,13 +46,12 @@ class FileStorageTestCase(unittest.TestCase):
         all_objects = new_storage.all()
         self.assertEqual(all_objects, {"User.{}".format(obj.id): obj})
 
-
-class BaseModelTestCase(unittest.TestCase):
+class TestBaseModel(unittest.TestCase):
+    
     def test_save(self):
         obj = BaseModel()
         obj.save()
         self.assertTrue(os.path.exists("file.json"))
-
 
 if __name__ == '__main__':
     unittest.main()
