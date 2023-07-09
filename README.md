@@ -3,18 +3,16 @@
 <p align="center">
   <img src="https://github.com/bdbaraban/AirBnB_clone/blob/master/assets/hbnb_logo.png" alt="HolbertonBnB logo">
 </p>
-<<<<<<< HEAD
 
 ## Index:
-* [Description](#Description:)
-* [Compilation/instalation](#Compilation/instalation:)
-* [Modes:](#Execution-modes)
-* [Usage](#Usage:)
-* [Commands](#Commands:)
-* [Example](#Example:)
+* [Project description](#Project description)
+* [Compilation instalation](#Compilation-instalation)
+* [Execution modes](#Execution-modes)
+* [Usage](#Usage)
+* [Commands](#Commands)
 * [Testing](#Testing)
 
-## Description:
+## Project description:
 <div>
 This project is the first phase of the 4 that make up the total project The AirBnB clone.<br>
 </div>
@@ -28,7 +26,7 @@ It is a command line interpreter that allows you to manage and administer the ob
 ### What can the console do?
 Allow to show, create, destroy, update the objects
 
-## Compilation/instalation:
+## Compilation instalation:
 First you have to clone the repository<br>
 ```
 https://github.com/Nilesoj20/holbertonschool-AirBnB_clone.git
@@ -193,18 +191,3 @@ All your test files are inside the **tests** folder.<b/>
 ## Collaborators:
     * Rivas Joselin 
     * Madueno Stefano
-=======
----
-<h2>MENU</h2>
----
-<h2> DESCRIPTION:</h2>
-
-##Compilation/instalation
-##Modes
-##Usage/comandos
-##Example
-##Testing
-
-
-#AirBnB clone - The console
->>>>>>> e738885a0c3868b42c5336b985df593205101e3b
