@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import unittest
 from models.base_model import BaseModel
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class TestBaseModel(unittest.TestCase):
