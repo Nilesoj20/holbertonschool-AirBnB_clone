@@ -10,11 +10,11 @@ class TestAmenity(unittest.TestCase):
         self.amenity = Amenity()
 
     def test_attributes(self):
-        self.assertTrue(hasattr(models.Amenity, 'name'))
-        self.assertEqual(models.Amenity.name, '')
+        self.assertTrue(hasattr(self.amenity, 'name'))
+        self.assertEqual(self.amenity.name, '')
 
     def test_inheritance(self):
-        self.assertIsInstance(self.amenity, models.BaseModel)
+        self.assertIsInstance(self.amenity, BaseModel)
 
     def test_str(self):
         string = str(self.amenity)
