@@ -9,9 +9,10 @@ class TestBaseModel(unittest.TestCase):
         self.model = BaseModel()
 
     def test_save(self):
-        prev_updated_at = self.model.updated_at
-        self.model.save()
-        self.assertNotEqual(prev_updated_at, self.model.updated_at)
+        obj = BaseModel()
+        prev_updated_at = obj.updated_at
+        obj.save()
+        self.assertNotEqual(prev_updated_at, obj.updated_at)
 
     def test_to_dict(self):
         model_dict = self.model.to_dict()

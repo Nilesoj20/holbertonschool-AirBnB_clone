@@ -31,7 +31,6 @@ class FileStorageTestCase(unittest.TestCase):
 
     def test_save(self):
         obj = User()
-        self.storage.new(obj)
         self.storage.save()
         self.assertTrue(os.path.exists("file.json"))
 
