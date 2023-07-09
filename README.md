@@ -5,12 +5,12 @@
 </p>
 
 ## Index:
-* [Project description](#Project description)
+* [Project description](#Project-description)
 * [Compilation instalation](#Compilation-instalation)
 * [Execution modes](#Execution-modes)
 * [Usage](#Usage)
 * [Commands](#Commands)
-* [Testing](#Testing)
+* [Testing](#Testing:-<img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>)
 
 ## Project description:
 <div>
