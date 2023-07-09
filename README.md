@@ -1,7 +1,7 @@
 <h1 align="center">AirBnB clone - The console</h1>
 <p alingn="center">Holberton Peru.</p>
 <p align="center">
-  <img src="https://imgur.com/wqN4wFs" alt="HolbertonBnB logo">
+  <img "https://i.imgur.com/wqN4wFs.png" alt="HolbertonBnB logo">
 </p>
 
 ## Index:
