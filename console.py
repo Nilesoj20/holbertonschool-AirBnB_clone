@@ -15,7 +15,8 @@ class HBNBCommand(cmd.Cmd):
     """Command interpreter class for HBNB"""
 
     prompt = '(hbnb) '
-    valid_classes = ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
+    valid_classes = ["BaseModel", "User", "Place",
+                     "State", "City", "Amenity", "Review"]
 
     def do_quit(self, arg):
         """ exit the program """
@@ -134,6 +135,7 @@ class HBNBCommand(cmd.Cmd):
         instance = instances[key]
         setattr(instance, attribute_name, attribute_value)
         instance.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
