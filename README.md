@@ -18,10 +18,6 @@
 * [Testing](#Testing)
 
 ## Project description:
-
-<p align="right">
-  <img src="image-4.png" width=45 align=right>
-</p>
 <div>
 This project is the first phase of the 4 that make up the total project The AirBnB clone.<br>
 </div>
