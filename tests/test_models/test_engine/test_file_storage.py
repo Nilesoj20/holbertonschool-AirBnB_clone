@@ -26,7 +26,8 @@ class FileStorageTestCase(unittest.TestCase):
 
     def test_new(self):
         obj = User()
-        self.assertIn("User.{}".format(obj.id), self.storage._FileStorage__objects)
+        variable = self.storage._FileStorage__objects
+        self.assertIn("User.{}".format(obj.id), variable)
 
     def test_save(self):
         obj = User()
