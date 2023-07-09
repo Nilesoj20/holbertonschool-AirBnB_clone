@@ -173,7 +173,8 @@ $
 
 ```
 
-## Testing: <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+## Testing: 
+<img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
 All your test files are inside the **tests** folder.<b/>
 
 ### Unittests:
