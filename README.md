@@ -78,7 +78,7 @@ $
 ## Usage:
 
 ### Commands:
- > **Basic commands:**
+ ### **Basic commands:**
 * **help:** show console help.
 ```
 (hbnb) help
@@ -101,7 +101,7 @@ $ ./console.py
 (hbnb) quit
 $
 ```
- > **Main commands:**
+ ### **Main commands:**
 
  * **Create:** create `<class>`
    * Creates a new object. 
