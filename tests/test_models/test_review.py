@@ -2,6 +2,7 @@
 """Unittest module for the Review Class."""
 
 import unittest
+from models.base_model import BaseModel
 from models.review import Review
 
 
