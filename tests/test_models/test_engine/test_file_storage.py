@@ -21,8 +21,12 @@ class FileStorageTestCase(unittest.TestCase):
         self.assertIsInstance(self.storage._FileStorage__objects, dict)
 
     def test_all(self):
-        obj = FileStorage()
-        self.assertEqual(obj.all(), obj._FileStorage__objects)
+        # obj = FileStorage()
+        # self.assertEqual(obj.all(), obj._FileStorage__objects)
+        obj = User()
+        models.storage.save()
+        all_objects = models.storage.all()
+        self.assertEqual(all_objects, {"User.{}".format(obj.id): obj})
 
     def test_new(self):
         obj = User()
@@ -41,10 +45,10 @@ class FileStorageTestCase(unittest.TestCase):
         os.remove("file.json")
         self.assertEqual(os.path.exists("file.json"), False)
 
-        # new_storage = FileStorage()
-        # new_storage.reload()
-        # all_objects = new_storage.all()
-        # self.assertEqual(all_objects, {"User.{}".format(obj.id): obj})
+        new_storage = FileStorage()
+        new_storage.reload()
+        all_objects = new_storage.all()
+        self.assertEqual(all_objects, {"User.{}".format(obj.id)
 
 
 if __name__ == '__main__':

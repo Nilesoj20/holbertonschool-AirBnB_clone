@@ -14,6 +14,9 @@ class TestBaseModel(unittest.TestCase):
         obj.save()
         self.assertNotEqual(prev_updated_at, obj.updated_at)
 
+        now = datetime.now()
+        self.assertAlmostEqual(obj.updated_at, now, delta=datetime.timedelta(seconds=1))
+
     def test_to_dict(self):
         model_dict = self.model.to_dict()
         self.assertEqual(type(model_dict), dict)

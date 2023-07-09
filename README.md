@@ -1,11 +1,16 @@
 <h1 align="center">AirBnB clone - The console</h1>
 <p alingn="center">Holberton Peru.</p>
 <p align="center">
-  <img src="https://github.com/bdbaraban/AirBnB_clone/blob/master/assets/hbnb_logo.png" alt="HolbertonBnB logo">
+ <img src="https://github.com/bdbaraban/AirBnB_clone/blob/master/assets/hbnb_logo.png" alt="HolbertonBnB logo">
 </p>
 
 ## Index:
-* [Project description](#Project description)
+
+<p align="right">
+  <img src="https://github.com/Nilesoj20/holbertonschool-AirBnB_clone/assets/118998391/ed6a107d-c0c5-4fc3-82f3-a74f764dcc4a" width=45 align=right>
+</p>
+
+* [Project description](#Project-description)
 * [Compilation instalation](#Compilation-instalation)
 * [Execution modes](#Execution-modes)
 * [Usage](#Usage)
@@ -13,6 +18,10 @@
 * [Testing](#Testing)
 
 ## Project description:
+
+<p align="right">
+  <img src="image-4.png" width=45 align=right>
+</p>
 <div>
 This project is the first phase of the 4 that make up the total project The AirBnB clone.<br>
 </div>
@@ -173,7 +182,11 @@ $
 
 ```
 
-## Testing: <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+## Testing:
+<p align="right">
+  <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+</p>
+
 All your test files are inside the **tests** folder.<b/>
 
 ### Unittests:
