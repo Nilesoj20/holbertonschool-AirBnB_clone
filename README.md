@@ -173,8 +173,11 @@ $
 
 ```
 
-## Testing: 
-![test](<img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>){: style="float: right;"}
+## Testing:
+<p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+</p>
+
 All your test files are inside the **tests** folder.<b/>
 
 ### Unittests:
