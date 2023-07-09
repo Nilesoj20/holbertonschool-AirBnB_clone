@@ -5,14 +5,14 @@
 </p>
 
 ## Index:
-* [Description](#Description:)
-* [Compilation/instalation](#Compilation/instalation:)
+* [Project description](#Project-description)
+* [Compilation instalation](#Compilation-instalation)
 * [Execution modes](#Execution-modes)
-* [Usage](#Usage:)
-* [Commands](#Commands:)
+* [Usage](#Usage)
+* [Commands](#Commands)
 * [Testing](#Testing)
 
-## Description:
+## Project description:
 <div>
 This project is the first phase of the 4 that make up the total project The AirBnB clone.<br>
 </div>
@@ -26,7 +26,7 @@ It is a command line interpreter that allows you to manage and administer the ob
 ### What can the console do?
 Allow to show, create, destroy, update the objects
 
-## Compilation/instalation:
+## Compilation instalation:
 First you have to clone the repository<br>
 ```
 https://github.com/Nilesoj20/holbertonschool-AirBnB_clone.git
@@ -173,7 +173,8 @@ $
 
 ```
 
-## Testing: <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+## Testing: 
+<img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
 All your test files are inside the **tests** folder.<b/>
 
 ### Unittests:
@@ -191,4 +192,3 @@ All your test files are inside the **tests** folder.<b/>
 ## Collaborators:
     * Rivas Joselin 
     * Madueno Stefano
-======
