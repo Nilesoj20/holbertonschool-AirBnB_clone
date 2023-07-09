@@ -10,7 +10,7 @@
 * [Execution modes](#Execution-modes)
 * [Usage](#Usage)
 * [Commands](#Commands)
-* [Testing](#Testing:-<img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>)
+* [Testing](#Testing)
 
 ## Project description:
 <div>
