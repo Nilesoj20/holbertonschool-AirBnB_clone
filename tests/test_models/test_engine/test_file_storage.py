@@ -22,11 +22,11 @@ class FileStorageTestCase(unittest.TestCase):
 
     def test_all(self):
         obj = FileStorage()
-        self.assertEqual(obj.all(), models.storage._FileStorage__objects)
+        self.assertEqual(obj.all(), obj._FileStorage__objects)
 
     def test_new(self):
         obj = User()
-        variable = self.storage._FileStorage__objects
+        variable = models.storage._FileStorage__objects
         self.assertIn("User.{}".format(obj.id), variable)
 
     def test_save(self):
