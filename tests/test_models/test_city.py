@@ -2,6 +2,7 @@
 """Unittest module for the City Class."""
 
 import unittest
+from models.base_model import BaseModel
 from models.city import City
 
 
