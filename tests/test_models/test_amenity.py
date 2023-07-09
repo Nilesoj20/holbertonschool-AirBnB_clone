@@ -2,7 +2,6 @@
 """Unittest module for the Amenity Class."""
 
 import unittest
-import models
 from models.amenity import Amenity
 from models.base_model import BaseModel
 
