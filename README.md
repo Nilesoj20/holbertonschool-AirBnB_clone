@@ -3,15 +3,13 @@
 <p align="center">
   <img src="https://github.com/bdbaraban/AirBnB_clone/blob/master/assets/hbnb_logo.png" alt="HolbertonBnB logo">
 </p>
-<<<<<<< HEAD
 
 ## Index:
 * [Description](#Description:)
 * [Compilation/instalation](#Compilation/instalation:)
-* [Modes:](#Execution-modes)
+* [Execution modes](#Execution-modes)
 * [Usage](#Usage:)
 * [Commands](#Commands:)
-* [Example](#Example:)
 * [Testing](#Testing)
 
 ## Description:
@@ -80,7 +78,7 @@ $
 ## Usage:
 
 ### Commands:
- > **Basic commands:**
+ ### **Basic commands:**
 * **help:** show console help.
 ```
 (hbnb) help
@@ -103,7 +101,7 @@ $ ./console.py
 (hbnb) quit
 $
 ```
- > **Main commands:**
+ ### **Main commands:**
 
  * **Create:** create `<class>`
    * Creates a new object. 
@@ -193,18 +191,4 @@ All your test files are inside the **tests** folder.<b/>
 ## Collaborators:
     * Rivas Joselin 
     * Madueno Stefano
-=======
----
-<h2>MENU</h2>
----
-<h2> DESCRIPTION:</h2>
-
-##Compilation/instalation
-##Modes
-##Usage/comandos
-##Example
-##Testing
-
-
-#AirBnB clone - The console
->>>>>>> e738885a0c3868b42c5336b985df593205101e3b
+======
