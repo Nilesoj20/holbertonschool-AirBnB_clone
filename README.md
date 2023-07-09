@@ -5,6 +5,11 @@
 </p>
 
 ## Index:
+<p align="right">
+  <img src="[https://cdn-icons-png.flaticon.com/128/868/868684.png](https://github.com/Nilesoj20/holbertonschool-AirBnB_clone/assets/118998391/ed6a107d-c0c5-4fc3-82f3-a74f764dcc4a)" width=45 align=center>
+</p>
+![image](https://github.com/Nilesoj20/holbertonschool-AirBnB_clone/assets/118998391/ed6a107d-c0c5-4fc3-82f3-a74f764dcc4a)
+
 * [Project description](#Project-description)
 * [Compilation instalation](#Compilation-instalation)
 * [Execution modes](#Execution-modes)
