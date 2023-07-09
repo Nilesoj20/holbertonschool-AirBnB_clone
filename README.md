@@ -174,7 +174,7 @@ $
 ```
 
 ## Testing:
-<p align="center">
+<p align="right">
   <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
 </p>
 
