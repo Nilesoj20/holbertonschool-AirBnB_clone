@@ -198,5 +198,5 @@ All your test files are inside the **tests** folder.<b/>
 ```
 
 ## Collaborators:
-    * Rivas Joselin <[LinkedIn de Joselin](https://www.linkedin.com/in/joselin-rivas-3976b4254)>
+    * Rivas Joselin <[LinkedIn de Joselin](https://linkedin.com/in/joselin-rivas-3976b4254)>
     * Madueno Stefano [linkedIn de Stefano]()
