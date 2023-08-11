@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<meta name="description" content="AirBnB clone">
+        <title>AirBnB clone</title>
+        <link rel="stylesheet" href="styles/4-common.css" type="text/css">
+        <link rel="stylesheet" href="styles/3-footer.css" type="text/css">
+        <link rel="stylesheet" href="styles/3-header.css" type="text/css">
+        <link rel="stylesheet" href="styles/6-filters.css" type="text/css">
+        <link rel="stylesheet" href="styles/8-places.css" type="text/css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header> 
+            <div class="imagen"> </div>
+        </header>
+        <!-- Conetenedor del filtro -->
+        <div class="container">
+            <section class="filters">
+                <button type="button">Search</button>  
+                <!-- primer cuadro en el contenedor Location -->
+                <div class="locations">
+                    <h3>States</h3>
+                    <h4>California, Arizona...</h4>
+                    <!-- Menu desplegable de locations -->
+                    <ul class="popover">
+                        <li>
+                            <h2>Arizona:</h2>
+                        </li>
+                        <li>
+                            <ul class="popover2">
+                                <li>Page</li>
+                                <li>Page2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>California:</h2>
+                        </li>
+                        <li>
+                                <ul class="popover2">
+                                    <li>San Francisco</li>
+                                    <li>Los Andes</li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+                <!-- Segundo cuadro en el contenedor amenities -->
+                <div class="amenities">
+                    <h3>Amenities</h3>
+                    <h4>Internet, Kitchen...</h4>
+                    <!-- Menu desplegable de amenities -->
+                    <ul class="popover_2">
+                        <li>Internet</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Iron</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <section class="places">
+                <div class="titulo_place">
+                    <h1>Places</h1>
+                </div>
+
+                <div class="contenedor_total">
+                    <!-- Cuadro My house -->
+                    <article class="house">
+                        <!-- Cabecera muestra el precio  -->
+                        <div class="titulo_precio">
+                            <div class="titulo">
+                                <h2>My Home</h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="precio">
+                                    $80
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Seccion de informacion con iconos  -->
+                        <div class="information">
+                            <div class="max_guest">
+                                <div class="imagen_guest"></div>
+                                <div class="inf">
+                                    <h2>2 Guests</h2>
+                                </div>
+                            </div>
+                            <div class="number_rooms">
+                                <div class="imagen_bedroom"></div>
+                                <div class="inf"><h2>1 Bedrooms</h2></div>
+                            </div>
+                            <div class="number_bathrooms">
+                                <div class="imagen_bathrooms"></div>
+                                <div class="inf"><h2>1 Bathroom</h2></div>
+                            </div>
+                        </div>
+                        <div class="User">
+                            <b>Owner:</b> John Lennon
+                        </div>
+                        <div class="description">
+                            This is lovely 1 bedroom and 1 bathroom apartment that can accommodate 2 people. It locates at the center of Shanghai land next to subway ine 1,1 stop to People Square, 2 stops to Bund, 3 stops to vingan Temple.
+                        </div>
+                    </article>
+                    <!-- Cuadro Tiny house -->
+                    <article class="house">
+                        <div class="titulo_precio">
+                            <div class="titulo">
+                                <h2>Tiny House</h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="precio">
+                                    $65
+                                </div>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="max_guest">
+                                <div class="imagen_guest"></div>
+                                <div class="inf"><h2>4 Guests</h2></div>
+                            </div>
+                            <div class="number_rooms">
+                                <div class="imagen_bedroom"></div>
+                                <div class="inf">
+                                    <h2>2 Bedrooms</h2>
+                                </div>
+                            </div>
+                            <div class="number_bathrooms">
+                                <div class="imagen_bathrooms"></div>
+                                <div class="inf">
+                                    <h2>1 Bathroom</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="User">
+                            <b>Owner:</b> Adrienne
+                        </div>
+                        <div class="description">
+                            Our place is a private, affordable stand-alone guest house
+                            centrally located just minutes to French Quarters, downtown,
+                            The Fair Groundz(Jazz Fest) and City Park. The guest house is
+                            a quaint, 400 square ft. with a full bath, mini kitchen, & living
+                            room. The extra high cellings make the home feel more
+                            spacious. The sofa converts to a bed also. We have a hand
+                            made counter area that adds character to the room and a
+                            great porch/deck to relax on and have a glass of Merlot.
+    
+                        </div>
+                    </article>
+                    <!-- Cuadro A suite -->
+                    <article class="house">
+                        <div class="titulo_precio">
+                            <div class="titulo">
+                                <h2>A Suite</h2>
+                            </div>
+                            <div class="price_by_night">
+                                <div class="precio">
+                                    $100
+                                </div>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="max_guest">
+                                <div class="imagen_guest"></div>
+                                <div class="inf"><h2>4 Guests</h2></div>
+                            </div>
+                            <div class="number_rooms">
+                                <div class="imagen_bedroom"></div>
+                                <div class="inf"><h2>4 Bedrooms</h2></div>
+                            </div>
+                            <div class="number_bathrooms">
+                                <div class="imagen_bathrooms"></div>
+                                <div class="inf"><h2>2 Bathroom</h2></div>
+                            </div>
+                        </div>
+                        <div class="User">
+                            <b>Owner:</b> Joselin Rivas
+                        </div>
+                       <div class="description">
+                            This is lovely 1 bedroom and 1 bathroom apartment that can accommodate 2 people. It locates at the center of Shanghai land next to subway ine 1,1 stop to People Square, 2 stops to Bund, 3 stops to vingan Temple.
+                        </div>
+                    </article>
+                </div>
+            </section>    
+        </div>
+
+        <footer>
+            Best School
+        </footer>
+    </body>  
+</html>
